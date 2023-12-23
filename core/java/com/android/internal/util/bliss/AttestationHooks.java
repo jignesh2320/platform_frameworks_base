@@ -64,7 +64,7 @@ public final class AttestationHooks {
         "DEVICE", "husky",
         "PRODUCT", "husky",
         "MODEL", "Pixel 8 Pro",
-        "FINGERPRINT", "google/husky/husky:14/UD1A.230803.041/10808477:user/release-keys"
+        "FINGERPRINT", "google/husky/husky:14/UD1A.231105.004/11010374:user/release-keys"
     );
 
     private static volatile String sProcessName;
@@ -86,7 +86,7 @@ public final class AttestationHooks {
         }
 
         if (packageName.equals(PACKAGE_GPHOTOS)) {
-            if (!SystemProperties.getBoolean("persist.sys.pixelprops.gphotos", false)) {
+            if (!SystemProperties.getBoolean("persist.sys.pixelprops.gphotos", true)) {
                 dlog("Photos spoofing disabled by system prop");
                 return;
             } else {
